@@ -276,8 +276,19 @@ We want to make this style apply to all the buttons so we are making it as globe
           
      */
      position: relative;
-
-     background-image: url('../../images/backGround.jpg');
+     /* You can only go back once? */
+     background-image: url("../backGround.jpg");
+    /* push it x and y */
+     background-position: 100px 58px;
+     /* 
+     The image will repeat in the above
+     case and also when img is smaller
+     than the container.
+     */
+     /* Remove repeat */
+    background-repeat: no-repeat;
+    /* center positioning */
+    background-position: center center;
 }
 
 .p-box h1{
@@ -315,6 +326,9 @@ We want to make this style apply to all the buttons so we are making it as globe
     /* Fron the top of the body */
     top: 400px;
 }
+
+
+
 
 
 
