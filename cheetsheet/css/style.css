@@ -326,6 +326,32 @@ We want to make this style apply to all the buttons so we are making it as globe
     /* Fron the top of the body */
     top: 400px;
 }
+/* psudo class   */
+.myList li:first-child{
+
+    background: red;
+
+}
+.myList li:last-child{
+
+    background: blue;
+    
+}
+.myList li:nth-child(5){
+
+    background: yellow;
+    
+}
+.myList li:nth-child(even){
+
+    background: grey;
+    
+}
+
+
+
+
+
 
 
 
