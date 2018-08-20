@@ -1,0 +1,268 @@
+
+    /*
+        Style described inside it applies to everything but this doesn't act as constant
+        basically it is used to reset
+    */
+*{
+     /*
+      removes default padding and margin of all the element
+      you can set this first and build styles from here 
+     */
+     /*
+    margin: 0px;
+    padding: 0px;
+       */
+}
+/* Applying globel styles to the links */
+a{  
+    /* remove underline */
+    text-decoration: none;
+    color: black;
+    /* Links have different states  hover,vesited,active(when you click on it it changes the color in an instant) */
+}
+
+a:hover{
+    color: red;
+}
+
+a:active{
+    color: green;
+}
+/* a:visited{
+    /* color: black; 
+} */
+body{
+    background-color: #f4f4f4;
+    color: #555555;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    /* Default */
+    font-size: 16px;
+    /* normal or bold */
+    font-weight: normal;
+
+    
+    
+    /* Short hand version of the above */
+    font: normal 12px Arial, Helvetica, sans-serif;
+    /*
+        em is unit. You can also use px but usually u'll see em as common practice.
+        This applies to everything in the body even heading,para etc
+    */
+     line-height: 1.6em;
+    
+     /* We are making margins equal to '0' so the color and browser can blend in */
+     /* By default heading will have top margin */
+     margin: 0;
+}
+
+.container{
+
+    /*     
+        width: 500px; - this is not responsive when browser's width becomes less than 500px 
+        the container stops to shrink.
+
+        When given in percents no matter the browsers width the containers width remains 80% of browser
+    */
+    width: 80%;
+
+    /* pushing containers to the middle */
+    /* sets auto margin on all sides -centered */
+    /* margin is spacing around an element */
+    margin: auto;
+    /* Just to know or boundries and alligning our divs inside  */
+    border: #333 solid;
+}
+.button{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+}
+
+.button:hover{
+    background-color: red;
+    color: white;
+}
+.clr{
+    /* This will clear any floats above it  */
+    clear: both;
+}
+
+    /*
+    Box model (refer img):
+    
+     Content can be anything. div, a, p, h, - anything
+     and padding(space inside) is the space between that elememnt and the boarder
+     Border(not frequently used) is has to do with border property and you can set width - top right bottom left
+     margin(space outside) is the spacing outside of that border
+    */
+.box-1{
+    /* short form */
+    background-color: #333;
+    color: #fff;
+    /* border -from padding to margin */
+    /*     
+    border-right: 5px red solid;
+    border-left: 5px red solid;
+    border-top: 5px red solid;
+    border-bottom: 5px red solid;
+     */
+    /* short hand of above */
+    border: 5px red solid;
+    /* width of the border */
+    /* border-width: 2px; */
+
+    /* padding - from content to border*/
+    /* By default h1 has little padding */
+    /* same as above */
+    padding: 20px;
+
+    /* margin -space outside of the border */
+
+    margin: 20px; 
+}
+
+/* targeting the box-1 h1 any h1 within this class */
+.box-1 h1{
+    font-family:  Tahoma;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2mm;
+    word-spacing: 1em;
+}
+
+.box-2{
+    border: 3px dotted #ccc;
+    padding: 20px;
+    /* 0 left and right */
+    margin: 20px 0px;
+    
+    /* delete below later*/
+
+    border: 3px #ccc dotted;
+    padding: 20px;
+    margin: 20px; 
+
+
+}
+
+.catagory{
+    border: 1px gray solid;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px ;
+
+}
+.catagory h2{
+    text-align: center;
+}
+
+.catagory ul{
+    /* border: #333 dotted 1px; */
+    padding: 8px;
+    list-style: square;
+    list-style: none;
+
+}
+
+.catagory li{
+    padding-bottom: 10px;
+    border-bottom: dotted 1px #333;
+    /* img insted of bullet points */
+    list-style-image: url('/images/check.png') 
+
+}   
+
+.myForm{
+    padding: 20px;
+}
+
+/* class inside a class also best practice */
+.myForm .form-group{
+    padding-bottom: 15px;
+}
+
+.myForm label{
+    display: block;
+}
+
+/* targeting the type we need to apply style */
+.myForm input[type="text"], .myForm textarea{ 
+    /* to make them look thicker */
+    padding: 8px;
+    width: 100%;
+}
+
+/* 
+We want to make this style apply to all the buttons so we are making it as globel
+
+
+.myForm input[type="submit"]{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+}
+ */
+.block{
+    /* 
+        When you float stuff you have to clear it otherwise 
+        Things are going to mess up
+    */
+    float: left;
+    /* Because there are three of them */
+    /* Of the container */
+    width: 33.3%;
+    /* 
+        100/3 this way each block bearly fits 
+        and my just adding below 1px border
+        will disrupt the whole.
+
+     */
+     
+     border: 1px solid #ccc;
+     padding: 10px;  
+     /* 
+     
+     This corrects
+     This property takes in padding,border and applies it to the width
+     so 33.3% becomes constant and everything adjusts within
+
+     *FlexBox takes care of this stuff and lot more- adv css topics. check out.
+
+
+     */ 
+     box-sizing: border-box;
+}
+
+#main-block{
+    float: left;
+    /* Of the container */
+    width: 70%;
+    box-sizing: border-box;
+
+}
+
+
+#sideBar{
+    float: right;
+    width: 30%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    /* same as above -Border box makes
+     sure width remaing 30% and the content is floted to the left
+     It will increase height if necessary  
+     */
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+

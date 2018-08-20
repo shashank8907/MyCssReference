@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- CSS -->
+<!-- 
+        It is used for styling  
+        Not a programming language
+        Used for website layout and design
+        can be extended to asss/less
+        What is sass and lass? 
+        also learn flexbox and animations
+
+        Eceryone's css is different
+
+    -->
+<!--
+         Always focus on keeping presentation,
+         functionality and styling
+         seperate.
+    -->
+<!-- 
+        inline css -directly in html element(No!)
+
+        internal css -Using <style> tags within a single document(also fattens html file)
+        
+        External css -Linking an external .css file(best practice) 
+
+     -->
+
+<head>
+
+
+    <title>Css</title>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+    <!-- Usually the content is center. and to achieve that we are using container -->
+    <div class="container">
+        <!-- 
+        Difference between class and ID
+        There is not much diff between class and id.
+        But it depends of your implimentation. 
+        
+        id to unique style - eg: main nav bar gets id because it's not repeated anywhere
+                            - #
+        class to repeated style - eg: style used for "box-1" can also be used for other 
+        parts in html. 
+    -->
+        <div class="box-1">
+
+
+            <!-- Calling js directly doesn't work so we use class. You can call this by giving it a class, id or box-1 h1-->
+            <h1>Like a rolling stone</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sed perferendis delectus adipisci at nulla deleniti, inventore
+                reiciendis eaque repellat aspernatur tempora consequatur quam assumenda ratione itaque voluptates recusandae
+                omnis.
+            </p>
+
+        </div>
+        <div class="box-2">
+
+
+            <!-- Calling js directly doesn't work so we use class. You can call this by giving it a class, id or box-1 h1-->
+            <h1>Blowing in the wind</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sed perferendis delectus adipisci at nulla deleniti, inventore
+                reiciendis eaque repellat aspernatur tempora consequatur quam assumenda ratione itaque voluptates recusandae
+                omnis.
+            </p>
+            <a class="button" href="#">Read more</a>
+        </div>
+        <div class="catagory">
+            <h2>catagory</h2>
+            <ul>
+                <li>
+                    <a href="#">catagory 1</a>
+                </li>
+                <li>
+                    <a href="#">catagory 2</a>
+                </li>
+                <li>
+                    <a href="#">catagory 3</a>
+                </li>
+                <li>
+                    <a href="http://google.com">catagory 4</a>
+                </li>
+            </ul>
+        </div>
+
+        <form class="myForm">
+            <div class="form-group">
+                <label>Name: </label>
+                <input type="text" name="name">
+            </div>
+            <div class="form-group">
+                <label>Email: </label>
+                <input type="text" name="email">
+            </div>
+            <div class="form-group">
+                <label>Message: </label>
+                <textarea name="Message"></textarea>
+            </div>
+            <input class="button" type="submit" value="Submit" name="">
+        </form>
+        <div class="block">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos temporibus sint eveniet earum sapiente, adipisci
+                tempora quo doloremque voluptatum quasi. Eveniet modi error iure quam quod! Aliquid repellat itaque recusandae.</p>
+        </div>
+        <div class="block">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos temporibus sint eveniet earum sapiente, adipisci
+                tempora quo doloremque voluptatum quasi. Eveniet modi error iure quam quod! Aliquid repellat itaque recusandae.</p>
+        </div>
+        <div class="block">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos temporibus sint eveniet earum sapiente, adipisci
+                tempora quo doloremque voluptatum quasi. Eveniet modi error iure quam quod! Aliquid repellat itaque recusandae.</p>
+        </div>
+        <!-- Floating elements that do not have same width as above -->
+
+        <!--       
+        When you float stuff you have to clear it otherwise 
+        Things are going to mess up
+        -->
+        <!-- To clear floats above -->
+        <div class="clr"></div>
+        <!-- Main Block takes up the main space -->
+        <!-- id is used if the related style is not likly to repeate -->
+        <div id="main-block">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos temporibus sint eveniet earum sapiente, adipisci
+                tempora quo doloremque voluptatum quasi. Eveniet modi error iure quam quod! Aliquid repellat itaque recusandae.</p>
+        </div>
+        <!-- side bar is beside the main block  -->
+        <div id="sideBar">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos temporibus sint eveniet earum sapiente, adipisci
+                tempora quo doloremque voluptatum quasi. Eveniet modi error iure quam quod! Aliquid repellat itaque recusandae.</p>
+
+        </div>
+        <!-- 
+            Positioning : 
+
+            It is a property and have 6 values
+
+            Static(default): renders the elements in order of the document flow
+            Relative: The element is positioned relative to it's original position(top, left, right bottom). 
+            Absolute: Allows us to target whatever position we want inside of a relative element 
+            Fixed: Fixed position to the browser window.So no matter who mush we scroll, where we are in the page- it will always be in the same position.
+            Initial: sets the property to it's default value 
+            Inherit: Will inherent whatever property of it's parents element.
+
+            
+        -->
+        <!-- To clear floats above -->
+        <div class="clr"></div>
+
+    </div> <!--  /container  -->
+    <div style="margin-top: 500px"></div>
+</body>
+
+</html>
