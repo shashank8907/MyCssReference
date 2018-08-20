@@ -80,6 +80,7 @@ body{
     border: none;
 }
 
+
 .button:hover{
     background-color: red;
     color: white;
@@ -260,8 +261,60 @@ We want to make this style apply to all the buttons so we are making it as globe
     box-sizing: border-box;
 }
 
+.p-box{
+    width: 800px;
+    height: 500px;
+    border: 1px solid #000;
+    margin-top: 30px;
+
+    /* 
+     This P-box is positioned to
+     static by default.
+     
+     We want these to be positioned to 
+     absolute so we can move them around
+          
+     */
+     position: relative;
+
+     background-image: url('../../images/backGround.jpg');
+}
+
+.p-box h1{
+    position: absolute;
+    /* 
+    
+    This means it's comming down
+    40px from the top
+    If it doesn't have a parent element
+    that is positioned relative 
+    top will become the whole body
+    
+    we want this h1 to be 40px 
+    from this p-box so position:relative
+
+    *Note: After giving the position:relative
+    in the container. we adjust the absolute
+    position of the h1 with respect to the container
 
 
+    */
+    top: 40px;
+    left: 100px;
+}
+
+.p-box h2{
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+}
+
+.fix-me{
+    /* The button is not gonna move */
+    position: fixed;
+    /* Fron the top of the body */
+    top: 400px;
+}
 
 
 
