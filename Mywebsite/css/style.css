@@ -48,10 +48,73 @@ body{
     background-image:url(../images/showcase.jpg);
     /* Setting background images position */
     background-position:center right; 
-    height: 300px;
-    /* 1:20:30  */
+    /* just for now */
+    /* if we use this -as the browser width decreases h1 goes out of the showcase box   */
+    /* height: 300px; */
+    /* 
+    That means the container hight should be min 300px
+    And it can go to any max as needed if required
+
+
+    */
+    min-height: 300px;
+    /* pushing */
+    margin-bottom: 30px;
+    text-align: center;
 }
 
+#showcase h1{
+    color: white;
+    font-size: 50px;
+    line-height: 1.6em;
+    padding-top: 30px;
 
 
+}
 
+/* Float main to lef and side bar to right */
+#main{
+    float: left;
+    width: 70%;
+    padding: 0 30px;
+    /* which includes padding and stuff */
+    box-sizing: border-box;
+}
+
+#sidebar{
+    float: right;
+    width: 30%;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    box-sizing:  border-box;
+}
+
+#main-footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px; 
+}
+/* 
+We need to make the website responsive
+means if we make the browser's width to very min
+we don't want the main and side bar to remain same
+
+*/
+/* media query */
+@media(max-width:600px){
+
+    /* So any style we put here will only be 
+    effective if it's under 600 px */
+    #main{
+        width: 100%;
+        float: none;
+    }
+    #sidebar{
+        width: 100%;
+        float: none;
+    }
+
+}
